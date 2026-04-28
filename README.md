@@ -1,6 +1,6 @@
-# Daily learning
+Daily learning
 
-## Analyzing Sales Dashboard Data in Power BI
+# Analyzing Sales Dashboard Data in Power BI
 
 Project developed at the Bootcamp Power BI Analyst Training, under the guidance of specialist [Juliana Zanelatto](https://github.com/julianazanelatto/ "Juliana Zanelatto").
 
