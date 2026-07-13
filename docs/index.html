@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales Report by Products and Segments</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="./src/script.js"></script>
+</head>
+<body class="theme-dark" data-page="index">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <h1 id="title">Sales Report by Products and Segments</h1>
+      <p id="subtitle">Analyzing Sales Dashboard Data in Power BI</p>
+    </div>
+
+    <div class="controls" aria-hidden="false">
+      <div class="toggle-group">
+        <button id="themeToggle" class="icon-btn" aria-pressed="true" title="Toggle theme" aria-label="Toggle theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+
+        <label for="langSelect" class="visually-hidden">Language</label>
+        <select id="langSelect" aria-label="Select language">
+          <option value="en">English (EN)</option>
+          <option value="pt-BR">Português (PT-BR)</option>
+          <option value="es">Español (ES)</option>
+        </select>
+      </div>
+
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="nav-btn active" href="index.html" data-nav="index" id="navIndex">Sales Report by Products and Segments</a>
+        <a class="nav-btn" href="page_two.html" data-nav="page_two" id="navPageTwo">Sales and Profit Report by Country</a>
+        <a class="nav-btn" href="page_three.html" data-nav="page_three" id="navPageThree">Distribution of Profit, Sales and Units Sold by Country and Segment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" role="main">
+    <section class="panel" aria-labelledby="panel1Title">
+      <h2 id="panel1Title">Total Sales by Products and Segments</h2>
+      <div class="visual-row">
+        <canvas id="barChart" class="chart" aria-label="Bar chart of sales by product and segment" role="img"></canvas>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="panel2Title">
+      <h2 id="panel2Title">Total Sales by Products - Pie Chart</h2>
+      <div class="visual-row split">
+        <canvas id="pieChart" class="chart" aria-label="Pie chart of sales by product" role="img"></canvas>
+        <div class="info-block">
+          <h3 id="kpiSales">Total Sales</h3>
+          <p id="kpiSalesValue">92,311,095</p>
+          <h3 id="kpiUnits">Total Units Sold</h3>
+          <p id="kpiUnitsValue">861,132</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="panel3Title">
+      <h2 id="panel3Title">Total Sales by Products - Area Chart</h2>
+      <div class="visual-row">
+        <canvas id="areaChart" class="chart" aria-label="Area chart of sales by product" role="img"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-nav">
+      <a href="index.html" class="small-nav">Index</a>
+      <a href="page_two.html" class="small-nav">Sales & Profit by Country</a>
+      <a href="page_three.html" class="small-nav">Distribution by Country & Segments</a>
+    </div>
+    <div class="credits">
+      <small id="footerText">© Dashboard demo</small>
+    </div>
+  </footer>
+</body>
+</html>

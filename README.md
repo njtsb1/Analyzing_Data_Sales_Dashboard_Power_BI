@@ -1,5 +1,3 @@
-Daily learning
-
 # Analyzing Sales Dashboard Data in Power BI
 
 Project developed at the Bootcamp Power BI Analyst Training, under the guidance of specialist [Juliana Zanelatto](https://github.com/julianazanelatto/ "Juliana Zanelatto").
@@ -18,11 +16,11 @@ Very well, the third page consists of:
 
 - Pie chart visual: Profit by segment
 
-![Screenshot](./img/page_one.png)
+![Screenshot](./docs/public/page_one.png)
 
-![Screenshot](./img/page_two.png)
+![Screenshot](./docs/public/page_two.png)
 
-![Screenshot](./img/page_three.png)
+![Screenshot](./docs/public/page_three.png)
 
 [LICENSE](/LICENSE)
 

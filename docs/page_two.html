@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales and Profit Report by Country</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="./src/script.js"></script>
+</head>
+<body class="theme-dark" data-page="page_two">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <h1 id="titlePageTwo">Sales and Profit Report by Country</h1>
+      <p id="subtitlePageTwo">Analyzing Sales Dashboard Data in Power BI</p>
+    </div>
+
+    <div class="controls">
+      <div class="toggle-group">
+        <button id="themeToggle2" class="icon-btn" aria-pressed="true" title="Toggle theme" aria-label="Toggle theme">
+          <span id="themeIcon2">🌙</span>
+        </button>
+
+        <label for="langSelect2" class="visually-hidden">Language</label>
+        <select id="langSelect2" aria-label="Select language">
+          <option value="en">English (EN)</option>
+          <option value="pt-BR">Português (PT-BR)</option>
+          <option value="es">Español (ES)</option>
+        </select>
+      </div>
+
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="nav-btn" href="index.html" data-nav="index">Sales Report by Products and Segments</a>
+        <a class="nav-btn active" href="page_two.html" data-nav="page_two">Sales and Profit Report by Country</a>
+        <a class="nav-btn" href="page_three.html" data-nav="page_three">Distribution of Profit, Sales and Units Sold by Country and Segment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainTwo" class="container" role="main">
+    <section class="panel" aria-labelledby="mapSalesTitle">
+      <h2 id="mapSalesTitle">Total Sales by Country (map)</h2>
+      <div class="map-wrap" id="mapSales" aria-hidden="false">
+        <!-- Simple SVG world silhouette with data-driven circles -->
+        <svg viewBox="0 0 1000 400" class="world-map" role="img" aria-label="Map showing sales by country">
+          <rect width="100%" height="100%" fill="transparent"></rect>
+          <!-- simplified continents silhouette (decorative) -->
+          <g id="continents" fill="currentColor" opacity="0.06"></g>
+
+          <!-- Country markers (approx positions) -->
+          <circle class="marker sales" id="m-us" cx="220" cy="160" r="10" data-country="United States"></circle>
+          <circle class="marker sales" id="m-ca" cx="200" cy="140" r="8" data-country="Canada"></circle>
+          <circle class="marker sales" id="m-mx" cx="210" cy="190" r="7" data-country="Mexico"></circle>
+          <circle class="marker sales" id="m-fr" cx="560" cy="120" r="9" data-country="France"></circle>
+          <circle class="marker sales" id="m-de" cx="590" cy="120" r="8" data-country="Germany"></circle>
+          <circle class="marker sales" id="m-br" cx="320" cy="260" r="6" data-country="Brazil"></circle>
+        </svg>
+        <aside class="map-legend" aria-hidden="false">
+          <h3 id="legendTitle">Legend</h3>
+          <p id="legendText">Circle size = sales; color = units sold</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="mapProfitTitle">
+      <h2 id="mapProfitTitle">Total Profit by Country (map)</h2>
+      <div class="map-wrap" id="mapProfit">
+        <svg viewBox="0 0 1000 400" class="world-map" role="img" aria-label="Map showing profit by country">
+          <g id="profitMarkers">
+            <circle class="marker profit" id="p-us" cx="220" cy="160" r="6" data-country="United States"></circle>
+            <circle class="marker profit" id="p-ca" cx="200" cy="140" r="5" data-country="Canada"></circle>
+            <circle class="marker profit" id="p-fr" cx="560" cy="120" r="7" data-country="France"></circle>
+            <circle class="marker profit" id="p-de" cx="590" cy="120" r="6" data-country="Germany"></circle>
+          </g>
+        </svg>
+        <aside class="map-legend">
+          <h3 id="legendProfitTitle">Legend</h3>
+          <p id="legendProfitText">Circle size = profit</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="countryBarTitle">
+      <h2 id="countryBarTitle">Total Sales by Country</h2>
+      <div class="visual-row">
+        <canvas id="countryBar" class="chart" aria-label="Bar chart of sales by country" role="img"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-nav">
+      <a href="index.html" class="small-nav">Index</a>
+      <a href="page_two.html" class="small-nav">Sales & Profit by Country</a>
+      <a href="page_three.html" class="small-nav">Distribution by Country & Segments</a>
+    </div>
+    <div class="credits">
+      <small id="footerTextTwo">© Dashboard demo</small>
+    </div>
+  </footer>
+</body>
+</html>

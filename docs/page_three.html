@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Distribution of Profit, Sales and Units Sold by Country and Segments</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script defer src="./src/script.js"></script>
+</head>
+<body class="theme-dark" data-page="page_three">
+  <header class="site-header" role="banner">
+    <div class="brand">
+      <h1 id="titlePageThree">Distribution of Profit, Sales and Units Sold by Country and Segments</h1>
+      <p id="subtitlePageThree">Analyzing Sales Dashboard Data in Power BI</p>
+    </div>
+
+    <div class="controls">
+      <div class="toggle-group">
+        <button id="themeToggle3" class="icon-btn" aria-pressed="true" title="Toggle theme" aria-label="Toggle theme">
+          <span id="themeIcon3">🌙</span>
+        </button>
+
+        <label for="langSelect3" class="visually-hidden">Language</label>
+        <select id="langSelect3" aria-label="Select language">
+          <option value="en">English (EN)</option>
+          <option value="pt-BR">Português (PT-BR)</option>
+          <option value="es">Español (ES)</option>
+        </select>
+      </div>
+
+      <nav class="top-nav" aria-label="Main navigation">
+        <a class="nav-btn" href="index.html" data-nav="index">Sales Report by Products and Segments</a>
+        <a class="nav-btn" href="page_two.html" data-nav="page_two">Sales and Profit Report by Country</a>
+        <a class="nav-btn active" href="page_three.html" data-nav="page_three">Distribution of Profit, Sales and Units Sold by Country and Segment</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="mainThree" class="container" role="main">
+    <section class="panel" aria-labelledby="map1Title">
+      <h2 id="map1Title">Map Visual 1: Sales and Units Sold by Country</h2>
+      <div class="map-wrap">
+        <svg viewBox="0 0 1000 400" class="world-map" role="img" aria-label="Map showing sales and units sold">
+          <circle class="marker sales" id="t-us" cx="220" cy="160" r="12" data-country="United States"></circle>
+          <circle class="marker sales" id="t-fr" cx="560" cy="120" r="10" data-country="France"></circle>
+          <circle class="marker sales" id="t-de" cx="590" cy="120" r="9" data-country="Germany"></circle>
+        </svg>
+        <aside class="map-legend">
+          <h3 id="map1Legend">Legend</h3>
+          <p id="map1LegendText">Size = sales; color = units sold</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="map2Title">
+      <h2 id="map2Title">Map Visual 2: Profit by Country</h2>
+      <div class="map-wrap">
+        <svg viewBox="0 0 1000 400" class="world-map" role="img" aria-label="Map showing profit by country">
+          <circle class="marker profit" id="t-us-p" cx="220" cy="160" r="8" data-country="United States"></circle>
+          <circle class="marker profit" id="t-fr-p" cx="560" cy="120" r="7" data-country="France"></circle>
+          <circle class="marker profit" id="t-de-p" cx="590" cy="120" r="6" data-country="Germany"></circle>
+        </svg>
+        <aside class="map-legend">
+          <h3 id="map2Legend">Legend</h3>
+          <p id="map2LegendText">Size = profit</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="panel" aria-labelledby="pieSegmentTitle">
+      <h2 id="pieSegmentTitle">Profit by Segment</h2>
+      <div class="visual-row">
+        <canvas id="segmentPie" class="chart" aria-label="Pie chart of profit by segment" role="img"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-nav">
+      <a href="index.html" class="small-nav">Index</a>
+      <a href="page_two.html" class="small-nav">Sales & Profit by Country</a>
+      <a href="page_three.html" class="small-nav">Distribution by Country & Segments</a>
+    </div>
+    <div class="credits">
+      <small id="footerTextThree">© Dashboard demo</small>
+    </div>
+  </footer>
+</body>
+</html>

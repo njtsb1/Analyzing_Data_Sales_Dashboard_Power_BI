@@ -1,0 +1,78 @@
+# Node dependencies
+node_modules/
+# Optional npm/yarn/pnpm logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Package lock files (ignore if you want to track them)
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
+
+# Build output
+dist/
+build/
+out/
+public/build/
+.vite/
+.parcel-cache/
+.cache/
+.next/
+.nuxt/
+
+# Environment files (do NOT commit secrets)
+.env
+.env.*.local
+.env.local
+.env.production
+.env.test
+
+# Logs and runtime files
+logs/
+*.log
+*.log.*
+pids/
+*.pid
+*.pid.lock
+*.seed
+
+# Coverage reports
+coverage/
+coverage-final.json
+lcov-report/
+
+# Editor and IDE settings
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files and caches
+*.tmp
+*.temp
+*.bak
+*.cache
+.sass-cache/
+.cache-loader/
+.history/
+
+# Build artifacts and maps (if generated)
+*.map
+*.gz
+
+# Security / keys / certificates
+*.pem
+*.key
+*.crt
+
+# Miscellaneous
+.eslintcache
+.stylelintcache
+*.local
